@@ -4,7 +4,7 @@
 
 int main()
 {
-    constexpr int pointCount = 200;
+    constexpr int pointCount = 300;
     int radius = 100;
     int radius2 = 180;
 
@@ -32,7 +32,7 @@ int main()
         }
 
         const float time = clock.getElapsedTime().asSeconds();
-        float ang = float(2 * M_PI * time) / float(pointCount);
+        float ang = float(2 * M_PI * time) / float(200);
         const float x = radius2 * std::cos(ang * 180.f / float(M_PI));
         const float y = radius2 * std::sin(ang * 180.f / float(M_PI));
         const sf::Vector2f offset = {x, y};
