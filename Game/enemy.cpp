@@ -195,7 +195,6 @@ void Enemy::enemyInteraction()
                 x = localXY.x * CELL_SIDE;
                 y = localXY.y * CELL_SIDE;
                 hitBox.setPosition({x, y});
-                //dirMove = getMoveBackDirection();
                 dirMove = getFreeRandomDirection();
             }
             else if (timeToThink < 0)
@@ -205,7 +204,6 @@ void Enemy::enemyInteraction()
                 {
                     dirMove = moves[getRandNumber(0, moves.size() - 1)];
                     timeToThink = maxTimeToThink;
-                    std::cout << "change " << x << ":" << y << std::endl;
                 }
             }
         }
